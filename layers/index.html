@@ -3,42 +3,30 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        window.onload = function () {
+            document.querySelector("#panels").addEventListener("click", function () {
+                var panel = document.querySelector("#b");
+                /*console.log(panel.styles.width);
+                var new_value;
+                if (panel.style.width !== '100%')
+                    new_value = '100%';
+                else
+                    new_value = '50%';
+                console.log(new_value);
+
+                panel.style.width = new_value;
+                */
+                panel.classList.toggle('expanded');
+            });
+        };
+    </script>
 </head>
 
 <body>
-    <div class="fullscreen h-container">
-        <div class="v-container">
-            <div class="header debug">
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-            </div>
-            <div class="content debug">
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
-            </div>
-            <div class="footer debug">3</div>
-        </div>
-        <div class="debug">
-            B
-        </div>
+    <!--<div id="top-bar">top-bar</div>-->
+    <div id="panels">
+        <div id="a" class="fullscreen">a</div>
+        <div id="b" class="fullscreen collapsed">b</div>
     </div>
 </body>
